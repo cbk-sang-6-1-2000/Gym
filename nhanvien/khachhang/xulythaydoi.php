@@ -1,8 +1,9 @@
 <?php
 session_start();
 require_once ('../../csdl/helper.php');
-if(($_SESSION['congviec']) != "Quản lý" AND $_SESSION['congviec'] != "Thu ngân"){
-header('location:../index.php');	
+if(($_SESSION['congviec']) != "Quản lý" AND $_SESSION['congviec'] != "Thu ngân" AND $_SESSION['congviec'] != "Huấn luyện viên"){
+    echo '<script>alert("Bạn không có quyền truy cập vào !!!")</script>';
+    echo '<script>window.location.href = "../khachhang/index.php";</script>';	
 }
 ?>
 
@@ -97,43 +98,60 @@ header('location:../index.php');
             <h5>Thông tin thay đổi</h5>
           </div>
           <div class='widget-content nopadding'>
-            <?php
+          <?php
             $id = $_GET['id'];
-              $qry="SELECT * FROM thongtinthaydoi where user_id='$id'";
-              $cnt = 1;
-                $result=mysqli_query($con,$qry);
+            $qry = "SELECT * FROM thongtinthaydoi WHERE user_id='$id'";
+            $cnt = 1;
+            $result = mysqli_query($con, $qry);
 
-                
-                  echo"<table class='table table-bordered table-hover'>
-                      <thead>
-                        <tr>
-                          <th>#</th>
-                          <th>Cân nặng</th>
-                          <th>Chiều cao</th>
-                          <th>Chỉ số vòng đo 1</th>
-                          <th>Chỉ số vòng đo 2</th>
-                          <th>Chỉ số do vòng 3</th>
-                          <th>Dáng người</th>
-                          <th>Ngày cập nhật sự thay đổi</th>
-                        </tr>
-                      </thead>";
-                      
-                    while($row=mysqli_fetch_array($result)){
-                    echo"<tbody> 
-                      
-                        <td><div class='text-center'>".$cnt."</div></td>
-                        <td><div class='text-center'>".$row['Cannangtd']."</div></td>
-                        <td><div class='text-center'>".$row['Chieucaotd']."</div></td>
-                        <td><div class='text-center'>".$row['Vong1td']."</div></td>
-                        <td><div class='text-center'>".$row['Vong2td']."</div></td>
-                        <td><div class='text-center'>".$row['Vong3td']."</div></td>
-                        <td><div class='text-center'>".$row['Dangnguoitd']."</div></td>
-                        <td><div class='text-center'>".$row['Ngaycapnhat']."</div></td>
-                      </tbody>";
-                  $cnt++;  }
-                    ?>
-
-            </table>
+            echo "<table class='table table-bordered table-hover'>
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Cân nặng</th>
+                        <th>Chiều cao</th>
+                        <th>Chỉ số vòng đo 1</th>
+                        <th>Chỉ số vòng đo 2</th>
+                        <th>Chỉ số do vòng 3</th>
+                        <th>Dáng người</th>
+                        <th>Ngày khách hàng điều chỉnh</th>
+                        <th>Trạng thái</th>
+                        <th>#</th>
+                        <th>#</th>
+                      </tr>
+                    </thead>
+                    <tbody>";
+                                
+            while($row = mysqli_fetch_array($result)) {
+              echo "<tr>
+                      <td><div class='text-center'>".$cnt."</div></td>
+                      <td><div class='text-center'>".$row['Cannangtd']."</div></td>
+                      <td><div class='text-center'>".$row['Chieucaotd']."</div></td>
+                      <td><div class='text-center'>".$row['Vong1td']."</div></td>
+                      <td><div class='text-center'>".$row['Vong2td']."</div></td>
+                      <td><div class='text-center'>".$row['Vong3td']."</div></td>
+                      <td><div class='text-center'>".$row['Dangnguoitd']."</div></td>
+                      <td><div class='text-center'>".$row['Ngaycapnhat']."</div></td>
+                      <td>
+                        <div class='text-center'>
+                          ";
+                          if($row['Trangthai'] == 0) {
+                            echo "<span style='background-color: yellow; color: black;'>Chưa xác nhận</span>";
+                          } else if ($row['Trangthai'] == 1) {
+                            echo "<span style='background-color: green; color: white;'>Đã xác nhận</span>";
+                          } else {
+                            echo "<span style='background-color: red; color: white;'>Thông tin không chính xác</span>";
+                          }
+                          echo "
+                        </div>
+                      </td>
+                      <td><div class='text-center'><a href='update.php?id=".$row['id']."' style='color:green'><i class='far fa-check-square'></i></a></div></td>
+                      <td><div class='text-center'><a href='update.php?id1=".$row['id']."' style='color: red;'><i class='far fa-times-circle'></i></a></div></td>
+                    </tr>";
+              $cnt++;
+            }
+            echo "</table>";
+          ?>
           </div>
         </div>
    
@@ -182,6 +200,7 @@ header('location:../index.php');
 function resetMenu() {
    document.gomenu.selector.selectedIndex = 2;
 }
+
 </script>
 </body>
 </html>

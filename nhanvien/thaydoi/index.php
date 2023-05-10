@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once ('../../csdl/helper.php');
-if(($_SESSION['congviec']) != "Kiểm tra"){
+if(($_SESSION['congviec']) != "Huấn luyện viên"){
  echo '<script>alert("Bạn không có quyền truy cập vào !!!")</script>';
     echo '<script>window.location.href = "../khachhang/index.php";</script>';
 }
@@ -68,7 +68,6 @@ if(($_SESSION['congviec']) != "Kiểm tra"){
                           <th>Dáng người</th>
                           <th>Ngày đăng ký</th>
                           <th>Thời gian</th>
-                          
                         </tr>
                       </thead>";
                       

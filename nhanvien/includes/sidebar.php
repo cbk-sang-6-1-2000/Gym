@@ -6,7 +6,6 @@
         <li class="<?php if($page=='khachhang-them'){ echo 'active'; }?>"><a href="../khachhang/themkhachhang.php"><i class="fas fa-arrow-right"></i>Đăng ký khách hàng</a></li>
         <li class="<?php if($page=='thaydoi'){ echo 'active'; }?>"><a href="../khachhang/dieuchinhthaydoi.php"><i class="fas fa-arrow-right"></i>Xem sự thay đổi</a></li>        
         <li class="<?php if($page=='khachhang-capnhat'){ echo 'active'; }?>"><a href="../khachhang/capnhatkh.php"><i class="fas fa-arrow-right"></i>khách hàng hết hạn</a></li>
-        <li class="<?php if($page=='khachhang'){ echo 'active'; }?>"><a href="../../nhanvien/thaydoi/index.php"><i class="fas fa-arrow-right"></i>Kiểm tra</a></li>
       </ul>
     </li>
 

@@ -1,8 +1,8 @@
 <?php
 session_start();
 require_once ('../../csdl/helper.php');
-if(($_SESSION['congviec']) != "Quản lý" AND $_SESSION['congviec'] != "Thu ngân" AND $_SESSION['congviec'] != "Kiểm tra"){
-header('location:../index.php');	
+if(($_SESSION['congviec']) != "Quản lý" AND $_SESSION['congviec'] != "Thu ngân" AND $_SESSION['congviec'] != "Huấn luyện viên"){
+header('location:../index.php');
 }
 ?>
 
@@ -19,6 +19,7 @@ header('location:../index.php');
 <link rel="stylesheet" href="../../style/css/matrix-media.css" />
 <link href="../../font-awesome/css/all.css" rel="stylesheet" />
 <link href="../../font-awesome/css/fontawesome.css" rel="stylesheet" />
+<link href="../../font-awesome/css/font-awesome.css" rel="stylesheet" />
 <link rel="stylesheet" href="../../style/css/jquery.gritter.css" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
 </head>
@@ -97,7 +98,7 @@ header('location:../index.php');
                 <td><div class='text-center'>".$row['ngày']."</div></td>
                 <td><div class='text-center'><a href='' onclick='khach_hang_list(".$row['user_id'].")' style='color:#F66;'><i class='fas fa-trash'></i>Xoá</a></div></td>
                 <td><div class='text-center'><a href='suakhachhang.php?id=".$row['user_id']."' style='color:#FFD700'><i class='fas fa-edit'></i>Sửa</a></div></td>
-                <td><div class='text-center'><a href='../thaydoi/index.php?id=".$row['user_id']."' style='color:#FFD700'><i class='fas fa-edit'></i>Sửa</a></div></td>
+                <td><div class='text-center'><a href='../thaydoi/index.php?id=".$row['user_id']."' style='color: #00FF00;'><i class='fas fa-wrench'></i></i>Sự thay đổi</a></div></td>
               </tbody>";
           $cnt++;  }
             ?>
