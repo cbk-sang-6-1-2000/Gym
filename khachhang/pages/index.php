@@ -31,7 +31,7 @@ include "../session.php";
 
 <div id="content">
   <div id="content-header">
-    <div id="breadcrumb"> <a href="index.php" title="You're right here" class="tip-bottom"><i class="icon-home"></i>Trang chủ</a></div>
+    <div id="breadcrumb"> <a href="index.php" title="You're right here" class="tip-bottom"><i class="fas fa-home"></i>Trang chủ</a></div>
   </div>
     <div class="row-fluid">
       <div class="widget-box">
@@ -121,7 +121,7 @@ include "../session.php";
 	  
 	  <div class="span6">
         <div class="widget-box">
-          <div class="widget-title bg_ly" data-toggle="collapse" href="#collapseG2"><span class="icon"><i class="icon-chevron-down"></i></span>
+          <div class="widget-title bg_ly" data-toggle="collapse" href="#collapseG2"><span class="icon"><i class="fas fal fa-bullhorn"></i></span>
             <h5>Thông báo của phòng tập</h5>
           </div>
           <div class="widget-content nopadding collapse in" id="collapseG2">

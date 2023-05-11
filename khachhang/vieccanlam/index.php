@@ -18,7 +18,7 @@ if(isset($_POST['Noidung'])){
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Gym System</title>
+<title>Quản lý Admin</title>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="stylesheet" href="../../style/css/bootstrap.min.css" />
@@ -26,7 +26,9 @@ if(isset($_POST['Noidung'])){
 <link rel="stylesheet" href="../../style/css/fullcalendar.css" />
 <link rel="stylesheet" href="../../style/css/matrix-style.css" />
 <link rel="stylesheet" href="../../style/css/matrix-media.css" />
-<link href="../../font-awesome/css/font-awesome.css" rel="stylesheet" />
+<link href="../../font-awesome/css/all.css" rel="stylesheet" />
+<link href="../../font-awesome/css/font-awesome.css" rel="stylesheet"/>
+<link href="../../font-awesome/css/fontawesome.css" rel="stylesheet" />
 <link rel="stylesheet" href="../../style/css/jquery.gritter.css" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
 </head>
@@ -43,13 +45,13 @@ if(isset($_POST['Noidung'])){
 
 <div id="content">
   <div id="content-header">
-    <div id="breadcrumb"> <a href="index.php" title="You're right here" class="tip-bottom"><i class="icon-home"></i>trang chủ</a></div>
+    <div id="breadcrumb"> <a href="index.php" title="You're right here" class="tip-bottom"><i class="fas fa-home"></i>trang chủ</a></div>
   </div>
   <div class="container-fluid">
     <div class="row-fluid">
     <div class="span12">
         <div class="widget-box">
-          <div class="widget-title"> <span class="icon"> <i class="icon-pencil"></i> </span>
+          <div class="widget-title"> <span class="icon"> <i class="fas fa-solid fa-pen"></i> </span>
             <h5>Thêm việc cần làm</h5>
           </div>
           <div class="widget-content nopadding">

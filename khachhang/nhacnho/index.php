@@ -5,11 +5,10 @@ if(!isset($_SESSION['user_id'])){
 header('location:../index.php');	
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Gym System</title>
+<title>Quản lý Admin</title>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="stylesheet" href="../../style/css/bootstrap.min.css" />
@@ -17,7 +16,9 @@ header('location:../index.php');
 <link rel="stylesheet" href="../../style/css/fullcalendar.css" />
 <link rel="stylesheet" href="../../style/css/matrix-style.css" />
 <link rel="stylesheet" href="../../style/css/matrix-media.css" />
-<link href="../../font-awesome/css/font-awesome.css" rel="stylesheet" />
+<link href="../../font-awesome/css/all.css" rel="stylesheet" />
+<link href="../../font-awesome/css/font-awesome.css" rel="stylesheet"/>
+<link href="../../font-awesome/css/fontawesome.css" rel="stylesheet" />
 <link rel="stylesheet" href="../../style/css/jquery.gritter.css" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
 </head>
@@ -31,7 +32,7 @@ header('location:../index.php');
 ?>
 <div id="content">
   <div id="content-header">
-    <div id="breadcrumb"> <a href="../pages/index.php" title="You're right here" class="tip-bottom"><i class="icon-home"></i>Trang chủ</a></div>
+    <div id="breadcrumb"> <a href="../pages/index.php" title="You're right here" class="tip-bottom"><i class="fas fa-home"></i> Trang chủ</a></div>
   </div>
   <div class="container-fluid">    
     <div class="row-fluid">

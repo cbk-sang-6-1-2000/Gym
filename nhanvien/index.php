@@ -3,7 +3,7 @@ require_once ('../csdl/helper.php');?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <title>Quản lý Admin</title><meta charset="UTF-8" />
+        <title>Gym Hoàng Sang</title><meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="../style/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="../style/css/bootstrap-responsive.min.css" />
@@ -12,14 +12,19 @@ require_once ('../csdl/helper.php');?>
         <link href="../font-awesome/css/fontawesome.css" rel="stylesheet" />
         <link href="../font-awesome/css/all.css" rel="stylesheet" />
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
-
+        <style>
+            img{
+                height: 100px;
+                width: 350px;
+            }
+        </style>
     </head>
     
     <body>
     
         <div id="loginbox">            
             <form id="loginform" method="POST" class="form-vertical" action="#">
-            <div class="control-group normal_text"> <h3><img src="../style/img/demo/logo.jpg" alt="Logo" /></h3></div>
+            <div class="control-group normal_text"> <h3><img src="../style/img/logo2.png" alt="Logo" /></h3></div>
                 <div class="control-group">
                     <div class="controls">
                         <div class="main_input_box">
