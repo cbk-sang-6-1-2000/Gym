@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once ('../../csdl/helper.php');
-if(($_SESSION['congviec']) != "Quản lý" AND $_SESSION['congviec'] != "Thu ngân" AND $_SESSION['congviec'] != "Huấn luyện viên"){
+if(($_SESSION['congviec']) != "Quản lý" AND $_SESSION['congviec'] != "Thu ngân" AND $_SESSION['congviec'] != "Kiểm tra"){
 header('location:../index.php');
 }
 ?>
